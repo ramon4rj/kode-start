@@ -7,23 +7,21 @@ class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFF1C1B1F), // Sua cor grafite
+      color: Color(0xFF1C1B1F),
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Row(
             children: [
-              // Ícone esquerdo (opcional)
+              // Ícone esquerdo 
               Icon(Icons.menu, color: Colors.white), 
               
               Expanded(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Imagem do logo (substitua pelo seu asset)
-                    Image.asset(
-                      'assets/logo.png', 
-                      height: 40, // Ajuste conforme necessário
+                    Image.asset('assets/logo.png', 
+                      height: 70,
                     ),
                     SizedBox(height: 8),
                     Text(
@@ -31,7 +29,7 @@ class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14.5,
-                        letterSpacing: 16.5, // Ajuste o espaçamento
+                        letterSpacing: 16.5,
                         fontWeight: FontWeight.w400,
                         fontFamily: 'Lato',
                       ),
@@ -40,7 +38,7 @@ class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
               
-              // Ícone direito (opcional)
+              // Ícone direito
               Icon(Icons.search, color: Colors.white),
             ],
           ),
@@ -50,5 +48,5 @@ class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(120); // Altura personalizada
+  Size get preferredSize => const Size.fromHeight(135);
 }
