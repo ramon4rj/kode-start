@@ -43,33 +43,25 @@ lib/
 1. Paginação de Personagens
 - Mostra lista de personagens
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-
-<img alt="" title="page" src="/assets/vid1.gif" width="400px" height= "150px" />
-
+![vid1](https://github.com/ramon4rj/kode-start/blob/develop/projects/workshop/api_rick_morty/assets/vid1.gif)
 
 2. Informações de Personagens
 - Mostra infomações sobre o personagem
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-<img alt="" title="info" src="/assets/vid2.gif" width="400px" height= "150px" />
 
+![vid2](https://github.com/ramon4rj/kode-start/blob/develop/projects/workshop/api_rick_morty/assets/vid2.gif)
 
 3. Busca de Personagens
 - Busca personagens por nome parcial ou completo
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-<img alt="" title="search" src="/assets/vid3.gif" width="400px" height= "150px" />
 
-
+![vid3](https://github.com/ramon4rj/kode-start/blob/develop/projects/workshop/api_rick_morty/assets/vid3.gif)
 
 4. Navegação Entre Telas
 - Navegação entre tela inicial, informação e busca
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-<img alt="" title="navigation" src="/assets/vid4.gif" width="400px" height= "150px" />
 
-
+![vid4](https://github.com/ramon4rj/kode-start/blob/develop/projects/workshop/api_rick_morty/assets/vid4.gif)
 
 ## 📋 Pré-Requisitos
 - Android Studio
