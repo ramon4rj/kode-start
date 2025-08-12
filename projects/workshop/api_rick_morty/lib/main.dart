@@ -77,14 +77,12 @@ class _CharactersScreenState extends State<CharactersScreen> {
       child: Container(
         width: 320, // Largura fixa para cada card
         height: 160,
-        // margin: const EdgeInsets.only(right: 25, left: 25, top: 8, bottom: 8),
-        margin: const EdgeInsets.only(right: 8, left: 8, top: 16, bottom: 16),
+        margin: const EdgeInsets.only(right: 16, left: 16, top: 8, bottom: 10),
+        // margin: const EdgeInsets.only(right: 8, left: 8, top: 16, bottom: 16), // figma
         decoration: BoxDecoration(
           color: Color(0xFF87A1FA),
           borderRadius: BorderRadius.circular(16),
         ),
-        // Padding interno
-        // padding: const EdgeInsets.all(16),
 
         // Exibe os personagens de forma vertical
         child: Column(
@@ -101,29 +99,28 @@ class _CharactersScreenState extends State<CharactersScreen> {
               ),
             ),
             // Informações 
-            Padding(
-              padding: const EdgeInsets.all(8),
-              child: Column( // Centraliza os cards
+              Column( // Centraliza os cards
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Align(
                     alignment: Alignment.centerLeft, // Alinha o nome do personagem mais a esquerda do card
-                  // Nome (uma linha com ellipsis se for muito longo)
-                  child: Text(
-                    character.name,
-                    style: const TextStyle(
-                      fontSize: 14, // usar 14.5 da overflow by pixels
-                      // fontWeight: FontWeight.w900,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8), // Espaço entre o nome
+                    child: Text(
+                      character.name,
+                      style: const TextStyle(
+                        fontSize: 14, // 14.5 no figma
+                      fontWeight: FontWeight.w900,
                       fontFamily: 'Lato',
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
                   ),
+                  ),
                   const SizedBox(height: 4),
                 ],
               ),
-            ),
           ],
         ),
       )

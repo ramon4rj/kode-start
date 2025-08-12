@@ -22,11 +22,14 @@ class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
       color: Color(0xFF1C1B1F),
       child: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          // padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          padding: const EdgeInsets.only(
+            // right: 16,
+            bottom: 16, // espaçamento inferior
+          ),
           child: Row(
             children: [
               // Ícone esquerdo 
-              // Icon(Icons.menu, color: Colors.white), 
               IconButton(
                 icon: Icon(
                 // Se estiver em character detail -> volta : se não -> menu
@@ -44,17 +47,18 @@ class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Image.asset('assets/logo.png', 
-                      height: 70,
+                      // height: 70,
                     ),
                     SizedBox(height: 8),
                     Text(
                       'RICK AND MORTY API',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 14.5,
-                        letterSpacing: 16.5,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: 'Lato',
+                        fontSize: 15,
+                        letterSpacing: 3, // 16.5% no figma
+                        fontWeight: FontWeight.w500, // w400 no figma
+                        // fontFamily: 'Lato',
+                        // fontStyle: FontStyle.normal,
                       ),
                     ),
                   ],
@@ -62,7 +66,6 @@ class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
               
               // Ícone direito
-              // Icon(Icons.search, color: Colors.white),
               IconButton(
                 icon: Icon(Icons.search, color: Colors.white),
                 tooltip: 'Search',

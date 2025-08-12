@@ -26,8 +26,6 @@ class CharacterDetailScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
           child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            // mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             
             children: [
@@ -43,7 +41,7 @@ class CharacterDetailScreen extends StatelessWidget {
               ),
               // Informações
               Padding(
-                padding: const EdgeInsets.only(right: 8, left: 8, top: 16, bottom: 16),
+                padding: const EdgeInsets.only(right: 10, left: 10, top: 8, bottom: 10),
                 child: Column( // Centraliza o card
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -59,7 +57,7 @@ class CharacterDetailScreen extends StatelessWidget {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    const SizedBox(height: 4),
+                    const SizedBox(height: 40),
                     // Status + espécie
                     Row(
                       children: [
@@ -82,13 +80,13 @@ class CharacterDetailScreen extends StatelessWidget {
                                 fontSize: 12.5,
                                 color: Colors.white,
                                 fontFamily: 'Lato',
-                                // fontStyle ????
                               ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                           ),
+                          
                         ),
-                        const SizedBox(height: 6),
+                        const SizedBox(height: 50), // Espaço entre textos
                       ],
                     ),
                     Text(
@@ -110,6 +108,7 @@ class CharacterDetailScreen extends StatelessWidget {
                             fontFamily: 'Lato',
                           ),
                         ),
+                        const SizedBox(height: 10),
 
                     // Origem
                         Text(
@@ -130,6 +129,7 @@ class CharacterDetailScreen extends StatelessWidget {
                             fontFamily: 'Lato',
                           ),
                         ),
+                        const SizedBox(height: 10),
 
                         Text(
                           'Last Known location: ',
@@ -149,6 +149,7 @@ class CharacterDetailScreen extends StatelessWidget {
                             fontFamily: 'Lato',
                           ),
                         ),
+                        const SizedBox(height: 10),
 
                         // First Seen
                         Text(
@@ -182,7 +183,8 @@ class CharacterDetailScreen extends StatelessWidget {
                               );
                             }
                           },
-                          )
+                          ),
+                    const SizedBox(height: 40),
                   ],
                 ),
               ),
