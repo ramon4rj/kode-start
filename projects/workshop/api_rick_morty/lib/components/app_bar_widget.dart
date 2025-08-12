@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:api_rick_morty/components/search_page.dart';
+
+
 // import 'package:kode_start_imc/theme/app_colors.dart';
+// import 'package:api_rick_morty/services/services.dart';
+// import 'package:http/http.dart';
 
 class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const RickMortyAppBar({Key? key}) : super(key: key);
+  final bool showBackButton; // booleano para voltar à tela inicial
+  final VoidCallback? onBackPressed;
+
+  const RickMortyAppBar({
+    Key? key,
+    this.showBackButton = false,
+    this.onBackPressed,
+    }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +26,18 @@ class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: Row(
             children: [
               // Ícone esquerdo 
-              Icon(Icons.menu, color: Colors.white), 
+              // Icon(Icons.menu, color: Colors.white), 
+              IconButton(
+                icon: Icon(
+                // Se estiver em character detail -> volta : se não -> menu
+                showBackButton ? Icons.arrow_back : Icons.menu,
+                color: Colors.white,
+                ),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                  
+                },
+              ),
               
               Expanded(
                 child: Column(
@@ -39,7 +62,18 @@ class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
               
               // Ícone direito
-              Icon(Icons.search, color: Colors.white),
+              // Icon(Icons.search, color: Colors.white),
+              IconButton(
+                icon: Icon(Icons.search, color: Colors.white),
+                tooltip: 'Search',
+                onPressed: () {
+                  // Filtro por nome
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const SearchScreen()),
+                  );
+                }, 
+              ),
+              
             ],
           ),
         ),

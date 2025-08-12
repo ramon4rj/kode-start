@@ -2,6 +2,7 @@ import 'package:api_rick_morty/components/app_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:api_rick_morty/models/character.dart';
 import 'package:api_rick_morty/services/services.dart';
+import 'package:api_rick_morty/components/character_detail_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -78,13 +79,21 @@ class _CharactersScreenState extends State<CharactersScreen> {
     itemCount: characters.length,
     itemBuilder: (context, index) {
       final character = characters[index];
-      return Container(
+      return GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CharacterDetailScreen(character: character),
+            ),
+          );
+        },
+      child: Container(
         width: 320, // Largura fixa para cada card
         height: 160,
         // margin: const EdgeInsets.only(right: 25, left: 25, top: 8, bottom: 8),
         margin: const EdgeInsets.only(right: 8, left: 8, top: 16, bottom: 16),
         decoration: BoxDecoration(
-          // color: Colors.grey[900],
           color: Color(0xFF87A1FA),
           borderRadius: BorderRadius.circular(16),
         ),
@@ -93,7 +102,7 @@ class _CharactersScreenState extends State<CharactersScreen> {
 
         // Exibe os personagens de forma vertical
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Imagem do personagem
             ClipRRect(
@@ -111,8 +120,10 @@ class _CharactersScreenState extends State<CharactersScreen> {
               child: Column( // Centraliza os cards
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  Align(
+                    alignment: Alignment.centerLeft, // Alinha o nome do personagem mais a esquerda do card
                   // Nome (uma linha com ellipsis se for muito longo)
-                  Text(
+                  child: Text(
                     character.name,
                     style: const TextStyle(
                       fontSize: 14, // usar 14.5 da overflow by pixels
@@ -122,16 +133,17 @@ class _CharactersScreenState extends State<CharactersScreen> {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
+                  ),
                   const SizedBox(height: 4),
                 ],
               ),
             ),
           ],
         ),
-      );
+      )
+      ) ;
     },
   );
 }
 
 }
-
