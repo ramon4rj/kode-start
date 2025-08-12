@@ -1,16 +1,112 @@
-# api_rick_morty
+<h1 align="center">Api Rick and Morty </h1>
 
-A new Flutter project.
 
-## Getting Started
+API criada para exercitar conhecimentos em Flutter na API Rick and Morty
 
-This project is a starting point for a Flutter application.
+Informações coletadas:
 
-A few resources to get you started if this is your first Flutter project:
+- Name
+- Status
+- Species
+- Gender
+- Origin
+- Last known Location
+- First Seen
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📦 Arquitetura do Projeto
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Estrutura de diretórios
+```
+lib/
+├── components/  # Componentes das telas
+├── models/      # Modelos de dados
+├── pages/       # Páginas usadas
+├── services/    # Serviços de API e repositórios
+└── main.dart    # Arquivo principal
+```
+
+## Padrões Adotados
+
+- Arquitetura Clean Simplificada: Separação entre camadas de apresentação, dados e serviços
+
+
+## 💻 Tecnologias Utilizadas
+
+- Flutter 3.32.8
+- Dart 3.8.1
+ 
+
+## 🛠️ Funcionalidades Implementadas
+
+// Incluir Gifs ou videos 
+
+1. Paginação de Personagens
+- Mostra lista de personagens
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+
+<img alt="" title="page" src="/assets/vid1.gif" width="400px" height= "150px" />
+
+
+2. Informações de Personagens
+- Mostra infomações sobre o personagem
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+<img alt="" title="info" src="/assets/vid2.gif" width="400px" height= "150px" />
+
+
+3. Busca de Personagens
+- Busca personagens por nome parcial ou completo
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+<img alt="" title="search" src="/assets/vid3.gif" width="400px" height= "150px" />
+
+
+
+4. Navegação Entre Telas
+- Navegação entre tela inicial, informação e busca
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+<img alt="" title="navigation" src="/assets/vid4.gif" width="400px" height= "150px" />
+
+
+
+## 📋 Pré-Requisitos
+- Android Studio
+- Android SDK Build-Tools
+- NDK (Side by side)
+- Android SDK Plataform-Tools
+
+
+## 🔧 Como Executar
+```
+# Instale o Dart e o Flutter
+sudo snap install dart --classic
+sudo snap install flutter --classic
+
+# Clone o repositório
+git clone https://github.com/ramon4rj/kode-start.git
+
+# Acesse a pasta da API
+cd projects/workshop/api_rick_morty
+
+# Instale as dependências
+sudo apt update -y && sudo apt-get upgrade -y;
+sudo apt install -y curl git unzip xz-utils zip libglu1-mesa
+sudo apt install libc6:amd64 libstdc++6:amd64 lib32z1 libbz2-1.0:amd64
+sudo apt install clang cmake ninja-build pkg-config libgtk-3-dev
+
+
+# Teste para ver se falta alguma coisa
+flutter doctor
+
+# Crie a plataforma
+flutter create --plataforms=android .
+
+# Detecte o dispositivo android
+flutter devices
+
+# Rode o projeto 
+flutter run -d <id do dispositivo>
+
+```

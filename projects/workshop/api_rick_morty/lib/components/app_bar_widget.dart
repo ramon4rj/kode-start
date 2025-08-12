@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:api_rick_morty/pages/search_page.dart';
 
-
-// import 'package:kode_start_imc/theme/app_colors.dart';
-// import 'package:api_rick_morty/services/services.dart';
-// import 'package:http/http.dart';
-
 class RickMortyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool showBackButton; // booleano para voltar à tela inicial
   final VoidCallback? onBackPressed;
