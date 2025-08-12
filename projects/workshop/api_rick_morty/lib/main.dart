@@ -2,7 +2,7 @@ import 'package:api_rick_morty/components/app_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:api_rick_morty/models/character.dart';
 import 'package:api_rick_morty/services/services.dart';
-import 'package:api_rick_morty/components/character_detail_page.dart';
+import 'package:api_rick_morty/components/character_detail_card.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,20 +14,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: Colors.black87,
-        // scaffoldBackgroundColor: Color(0xFF1C1B1F)
-        // appBarTheme: AppBarTheme(
-        //   backgroundColor: Color(0xFF1C1B1F),
-        //   foregroundColor: Colors.white,
-        //   toolbarHeight: 130.92,
-        //   centerTitle: true,
-        //   titleTextStyle: TextStyle(
-        //     color: Colors.white, 
-        //     fontSize: 14.5,
-        //     letterSpacing: 16.5,
-        //     fontWeight: FontWeight.w400,
-        //     fontFamily: 'Lato'
-        //   ),
-        // )
       ),
       home: const CharactersScreen(),
     );

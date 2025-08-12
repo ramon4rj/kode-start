@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:api_rick_morty/components/search_page.dart';
+import 'package:api_rick_morty/pages/search_page.dart';
 
 
 // import 'package:kode_start_imc/theme/app_colors.dart';

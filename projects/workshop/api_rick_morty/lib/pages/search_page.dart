@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:api_rick_morty/models/character.dart';
 import 'package:api_rick_morty/services/services.dart';
-import 'package:api_rick_morty/components/character_detail_page.dart';
+import 'package:api_rick_morty/components/character_detail_card.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
